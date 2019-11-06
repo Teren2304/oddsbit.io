@@ -1,0 +1,46 @@
+.hm-submenu{
+	@include flex(center, center);
+	&__item{
+		margin-left: 5px;
+		&.link-dropdown{
+			&:after{
+				color: #fff;
+			}
+		}
+		.dropdown{
+			&--lang{
+				min-width: 300px;
+				.dropdown__item{
+					&:nth-child(odd){
+						border-right: 1px solid $fifth;
+					}
+					&:nth-last-child(-n+2){
+						border-bottom: 0;
+					}
+				}
+			}
+			&--odds{
+
+			}
+			&--service{
+				right: 0;
+				left: auto;
+				transform: translate(0);
+			}
+		}
+	}
+	
+	&__link{
+		white-space: nowrap;
+		&:hover,
+		&--active{
+			color: $primary;
+		}
+		span{
+			margin-right: 3px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+}

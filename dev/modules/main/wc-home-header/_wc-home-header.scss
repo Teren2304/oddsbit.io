@@ -1,0 +1,10 @@
+.wc-home-header{
+	@include flex(flex-start, center);
+	height: $base-height;
+	padding: 5px 10px;
+	background-color: #000;
+
+	&__icon{
+		color: #fff;
+	}
+}

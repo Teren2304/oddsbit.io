@@ -1,0 +1,146 @@
+@mixin font{
+	font-style: 	normal;
+	font-size: 		$base-font-size;
+	font-family: 	$base-font-family;
+	font-weight: 	$base-font-weight;
+	color: 			$base-font-color;
+	line-height: 	$base-font-line-height;
+	text-transform: none;
+}
+
+@mixin input{
+	overflow: 	hidden;
+	width: 		100%;
+	padding: 	5px 10px;
+	height: 	$base-height;
+}
+
+@mixin size($width: null, $height: null){
+	width: $width;
+	@if $height{
+		height: $height;
+	}@else{
+		height: $width;
+	}
+}
+
+@mixin absolute{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+@mixin absolute-center{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-left($left: null){
+	position: absolute;
+	top: 50%;
+	@if $left{
+		left: $left;
+	}@else {
+		left: 0;
+	}
+	transform: translateY(-50%);
+}
+
+@mixin absolute-center-right($right: null){
+	position: absolute;
+	top: 50%;
+	@if $right{
+		right: $right;
+	}@else {
+		right: 0;
+	}
+	transform: translateY(-50%);
+}
+
+@mixin absolute-center-top($top: null){
+	position: absolute;
+	left: 50%;
+	@if $top{
+		top: $top;
+	}@else {
+		top: 0;
+	}
+	transform: translateX(-50%);
+}
+
+@mixin absolute-center-bottom($bottom: null){
+	position: absolute;
+	right: 50%;
+	@if $bottom{
+		bottom: $bottom;
+	}@else {
+		bottom: 0;
+	}
+	transform: translateX(-50%);
+}
+
+@mixin flex($j-content: null, $a-content: null, $f-direction: null){
+	display: flex;
+
+	@if $j-content{
+		justify-content: $j-content;
+	}
+
+	@if $a-content{
+		align-items: $a-content;
+	}
+
+	@if $f-direction{
+		flex-direction: $f-direction;
+	}
+}
+
+@mixin shadow($color: null){
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: $color;
+	}
+}
+
+@mixin ellipsis{
+	max-width: 100%;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: left;
+	text-overflow: ellipsis;
+}
+
+@mixin media-max($maxwidth){
+	@media only screen and (max-width: $maxwidth+ "px"){
+		@content
+	}
+}
+
+@mixin media-min($minwidth){
+	@media only screen and (min-width: $minwidth+ "px"){
+		@content
+	}
+}
+
+@mixin placeholder($color){
+	&::-webkit-input-placeholder{
+		color: $color;
+	}
+	&::-moz-placeholder{
+		color: $color;
+	}
+	&:-ms-input-placeholder{
+		color: $color;
+	}
+}

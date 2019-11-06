@@ -1,0 +1,93 @@
+.ip-classification-bar{
+	height: 70px;
+	position: relative;
+	background-color: $fourth;
+	margin-bottom: 1px;
+	&--small{
+		height: $base-height;
+		.ip-slider{
+			&__item{
+				width: auto;
+				height: 100%;
+				padding: 0 10px;
+				@include flex(center, center);
+			}
+			&__text{
+				height: auto;
+				padding: 0;
+			}
+		}
+	}
+	&__wrap{
+		height: 100%;
+		overflow: hidden;
+		padding: 0 30px;
+		@include flex(flex-start, stretch);
+	}
+
+	&__item{
+		@include size(100px, 100%);
+		text-align: center;
+		&:hover,
+		&--active{
+			.ip-classification-bar{
+				&__text{
+					color: $third;
+				}
+				&__img{
+					i{
+						color: rgba(255,255,255,1);
+						border-color: rgba(255,255,255,1);
+					}
+				}
+			}	
+		}
+	}
+
+	&__text{
+		height: 35%;
+		padding: 5px 5px 0 5px;
+		color: #4a4b4a;
+	}
+	&__img{
+		height: 65%;
+		width: 100%;
+		.b-sports{
+			margin: 0 auto;
+			height: 40px;
+			width: 40px;
+		}
+		i{
+			color: #4a4b4a;
+			font-size: 24px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #4a4b4a;
+		}
+	}
+
+	&__prev,
+	&__next{
+		@include flex(center,center);
+		background-color: $primary;
+		position: absolute;
+		width: 30px;
+		top: 0;
+		bottom: 0;
+		border: 0;
+		opacity: 0.7;
+		&:hover,
+		&--active{
+			opacity: 1;
+		}
+		i{
+			color: #fff;
+			font-size: 24px;
+		}
+	}
+	&__prev{
+		left: 0;
+	}
+	&__next{
+		right: 0;
+	}
+}

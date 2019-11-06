@@ -1,0 +1,61 @@
+.btn{
+	@include flex(center,center);
+	@include font;
+	@include input;
+	border: 0;
+	cursor: pointer;
+
+	&--primary{
+		background-color: $primary;
+		color: #fff;
+		* {
+			color: #fff;
+		}
+	}
+
+
+	&--coff{
+		background-color: #fff;
+		&:hover{
+			background-color: #f2f2f2;
+		}
+		&--active{
+			background-color: #4a4b4a;
+			.btn{
+				&__text{
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	&--square{
+		@include size($base-height);
+	}
+
+	&--img{
+		padding-left: 5px;
+	}
+
+	&__name{
+		color: #000;
+		margin: 0 3px;
+	}
+	&__odds{
+		color: $primary;
+		font-weight: bold;
+		margin: 0 3px;
+	}
+	&__text{
+		color: #000;
+		margin: 0 3px;
+	}
+	&__text-e{
+		color: #000;
+		margin: 0 3px;
+		@include ellipsis;
+	}
+	&__img{
+		@include size(20px);
+	}
+}
