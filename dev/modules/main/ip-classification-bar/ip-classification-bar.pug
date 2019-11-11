@@ -5,12 +5,9 @@ mixin ip-classification-bar
 		button.ip-classification-bar__next
 			i.fal.fa-angle-right
 		.ip-classification-bar__wrap
-			a.ip-classification-bar__item
-				p.font--l-white.ip-classification-bar__text Favourites
-				.ip-classification-bar__img
-					i.fal.fa-star
 			each item, index in g_sports
 				a.ip-classification-bar__item(class=(index==3 ? "ip-classification-bar__item--active" : ""))
 					p.font--l-white.ip-classification-bar__text= item
-					.ip-classification-bar__img
-						.b-sports(class="b-sports--"+item.toLowerCase())
+					.ip-classification-bar__img(class="ip-classification-bar__img--"+item.toLowerCase())
+						if item.toLowerCase() == "favourite"
+							i.fal.fa-star

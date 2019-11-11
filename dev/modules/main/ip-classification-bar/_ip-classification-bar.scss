@@ -2,7 +2,6 @@
 	height: 70px;
 	position: relative;
 	background-color: $fourth;
-	margin-bottom: 1px;
 	&--small{
 		height: $base-height;
 		.ip-slider{
@@ -28,16 +27,45 @@
 	&__item{
 		@include size(100px, 100%);
 		text-align: center;
+		min-width: 100px;
 		&:hover,
 		&--active{
 			.ip-classification-bar{
 				&__text{
-					color: $third;
+					color: $second;
 				}
 				&__img{
-					i{
-						color: rgba(255,255,255,1);
-						border-color: rgba(255,255,255,1);
+					&--favourite{
+						&:before{
+							background-color: $second;
+						}
+						i{
+							color: $second;
+						}
+					}
+					&--soccer{
+						background-image: url('../img/icon/active/Soccer-y.svg');
+					}
+					&--tennis{
+						background-image: url('../img/icon/active/Tennis-y.svg');
+					}
+					&--baseball{
+						background-image: url('../img/icon/active/Baseball-y.svg');
+					}
+					&--cricket{
+						background-image: url('../img/icon/active/Cricket-y.svg');
+					}
+					&--basketball{
+						background-image: url('../img/icon/active/Basketball-y.svg');
+					}
+					&--volleyball{
+						background-image: url('../img/icon/active/Volleyball-y.svg');
+					}
+					&--table_tennis{
+						background-image: url('../img/icon/active/Table_Tennis-y.svg');
+					}
+					&--horse_racing{
+						background-image: url('../img/icon/active/Horse_Racing-y.svg');
 					}
 				}
 			}	
@@ -45,24 +73,59 @@
 	}
 
 	&__text{
-		height: 35%;
+		height: 40%;
 		padding: 5px 5px 0 5px;
 		color: #4a4b4a;
 	}
 	&__img{
-		height: 65%;
+		height: 60%;
 		width: 100%;
-		.b-sports{
-			margin: 0 auto;
-			height: 40px;
-			width: 40px;
-		}
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
 		i{
 			color: #4a4b4a;
 			font-size: 24px;
-			padding-bottom: 8px;
-			border-bottom: 1px solid #4a4b4a;
+			margin-top: 2px;
+			display: inline-flex;
 		}
+		&--favourite{
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				left: 20%;
+				right: 20%;
+				bottom: 0;
+				height: 1px;
+				background-color: #4a4b4a;
+			}
+		}
+		&--soccer{
+			background-image: url('../img/icon/custom/Soccer.svg');
+		}
+		&--tennis{
+			background-image: url('../img/icon/custom/Tennis.svg');
+		}
+		&--baseball{
+			background-image: url('../img/icon/custom/Baseball.svg');
+		}
+		&--cricket{
+			background-image: url('../img/icon/custom/Cricket.svg');
+		}
+		&--basketball{
+			background-image: url('../img/icon/custom/Basketball.svg');
+		}
+		&--volleyball{
+			background-image: url('../img/icon/custom/Volleyball.svg');
+		}
+		&--table_tennis{
+			background-image: url('../img/icon/custom/Table_Tennis.svg');
+		}
+		&--horse_racing{
+			background-image: url('../img/icon/custom/Horse_Racing.svg');
+		}
+
 	}
 
 	&__prev,
