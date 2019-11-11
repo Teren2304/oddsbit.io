@@ -8,6 +8,5 @@
 	&--second{
 		@include size(100%, $base-height);
 		background-color: $fourth;
-		border-top: 1px solid $fourth;
 	}
 }

@@ -23,7 +23,7 @@
 		&:after{
 			transform: translateY(-50%) rotateZ(180deg);
 		}
-		.dropdown{
+		& > .dropdown{
 			display: block;
 		}
 	}

@@ -1,10 +1,12 @@
 .hm-submenu{
 	@include flex(center, center);
 	&__item{
-		margin-left: 5px;
+		margin-left: 15px;
 		&.link-dropdown{
 			&:after{
 				color: #fff;
+				font-size: 12px;
+				margin-top: 2px;
 			}
 		}
 		.dropdown{
@@ -32,6 +34,7 @@
 	
 	&__link{
 		white-space: nowrap;
+		font-size: 12px;
 		&:hover,
 		&--active{
 			color: $primary;
@@ -42,5 +45,8 @@
 				margin-right: 0;
 			}
 		}
+	}
+	&__text{
+		font-size: 12px;
 	}
 }
