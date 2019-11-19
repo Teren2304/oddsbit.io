@@ -112,6 +112,32 @@
 				color: $second;
 			}
 		}
+
+		.link-dropdown{
+			color: $second;
+			margin-left: 10px;
+			&:after{
+				color: $second;
+			}
+			&:hover,
+			&--active{
+				color: #fff;
+				&:after{
+					color: #fff;
+				}
+			}
+			.dropdown{
+				//display: block;
+				left: 0;
+				right: auto;
+				&__item{
+					*{
+						color: #000;
+					}
+				}
+			}
+		}
+
 	}
 	&__left,
 	&__center,
@@ -371,6 +397,19 @@
 		}
 	}
 
+	&__update{
+		position: relative;
+		padding-left: 20px;
+		margin-right: 10px;
+		margin-left: auto;
+		&:after{
+			@include absolute-center-left(0);
+			content: '\f0ec';
+			font-family: "Font Awesome 5 Pro";
+			font-weight: 500;
+			color: #fff;
+		}
+	}
 
 	.tennis-ss{
 		@include flex(flex-start, center);
@@ -405,5 +444,4 @@
 			}
 		}
 	}
-
 }

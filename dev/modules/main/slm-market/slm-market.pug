@@ -1,7 +1,9 @@
 mixin slm-market
 	.slm-market&attributes(attributes)
+		+slm-market-alert
 		+slm-market-header
-
+		+slm-market-header-2
+		+slm-market-tabs
 
 mixin slm-market-header
 	.slm-market__header&attributes(attributes)
@@ -11,8 +13,17 @@ mixin slm-market-header
 			hr.slm-market__divider
 			a.slm-market__time-link All
 
-		+slm-market-alert
-
+mixin slm-market-header-2
+	.slm-market__header&attributes(attributes)
+		a.fal.fa-angle-left.slm-market__back
+		a.font--white Soccer
+		hr.slm-market__divider.slm-market__divider--small
+		p.font--white Next 12 Hours
+		.slm-market__pagination
+			p.font--white.slm-market__pagination-text 1 Show Next
+			.slm-market__pagination-link 3
+			.slm-market__pagination-link 12
+			.slm-market__pagination-link 24
 
 mixin slm-market-alert
 	.slm-market__alert&attributes(attributes)
@@ -20,3 +31,15 @@ mixin slm-market-alert
 			.slm-market__alert-count 1
 			.slm-market__alert-text Selection
 			button.btn.btn--primary.slm-market__alert-btn Create Coupon
+
+mixin slm-market-tabs
+	.slm-market__tabs&attributes(attributes)
+		.slm-market__wrap
+			.slm-market__link.slm-market__link--active Coupons
+			.slm-market__link Outrights
+
+		a.slm-market__live
+			p.font--white Live
+			p.font--primary In-Play
+			p.font--white 61
+			i.fal.fa-angle-right

@@ -1,0 +1,75 @@
+mixin ssm-search
+	.ssm-search&attributes(attributes)
+		+ssm-search-header
+		+ssm-search-category
+		+ssm-search-wrap
+		+ssm-search-grid
+
+		+ssm-search-category
+		+ssm-search-wrap
+		+ssm-search-grid
+
+
+mixin ssm-search-header
+	.ssm-search__header&attributes(attributes)
+		a.ssm-search__link.ssm-search__link--active Soccer
+		a.ssm-search__link American Football
+		a.ssm-search__link Cricket
+
+mixin ssm-search-category
+	.ssm-search__category&attributes(attributes)
+		p.text-uppercase Soccer
+
+mixin ssm-search-wrap
+	.ssm-search__wrap&attributes(attributes)
+		+ssm-search-toogle
+		+ssm-search-more
+
+mixin ssm-search-toogle
+	.ssm-search__toogle&attributes(attributes)
+		p.font--bold England
+		i.fal.fa-angle-down.icon
+
+mixin ssm-search-more
+	.ssm-search__more&attributes(attributes)
+		p England
+		i.fal.fa-angle-right.icon
+
+
+
+mixin ssm-search-grid
+	.ssm-search__grid&attributes(attributes)
+		.ssm-search__column
+			.ssm-search__info
+				p Boston UTD v Blyth Spartans
+				.ssm-search__block
+					span.info-date Tue 19 Nov 21:45
+			.ssm-search__info
+				p Boston UTD v Blyth Spartans
+				.ssm-search__block
+					span.info-date Tue 19 Nov 21:45
+					span.info-score 0:0
+			- var n = 0;
+			while n < 2
+				.ssm-search__info
+					p Boston UTD v Blyth Spartans
+					.ssm-search__block(data=n++)
+						span.info-date Tue 19 Nov 21:45
+		.ssm-search__column
+			- var n = 0;
+			while n < 4
+				.ssm-search__button
+					span.odds-name 1
+					span.odds-value= n++
+		.ssm-search__column
+			- var n = 0;
+			while n < 4
+				.ssm-search__button
+					span.odds-name 1
+					span.odds-value= n++
+		.ssm-search__column
+			- var n = 0;
+			while n < 4
+				.ssm-search__button
+					span.odds-name 1
+					span.odds-value= n++

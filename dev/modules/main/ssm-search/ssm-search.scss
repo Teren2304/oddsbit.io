@@ -1,0 +1,114 @@
+.ssm-search{
+	background-color: #fff;
+
+
+	&__header{
+		@include flex(flex-start, stretch);
+		height: 42px;
+		padding: 0 5px;
+		border-bottom: 1px solid $third;
+		overflow-x: hidden;
+	}
+
+	&__link{
+		@include flex(center,center);
+		position: relative;
+		height: 100%;
+		padding: 5px 10px;
+		white-space: nowrap;
+		&:after{
+			@include size(0, 3px);
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: $primary;
+		}
+		&:hover{
+			
+		}
+		&--active{
+			&:after{
+				width: 100%;
+			}
+		}
+	}
+
+	&__category{
+		margin-top: 20px;
+		padding: 10px;
+		border-bottom: 1px solid $third;
+		cursor: pointer;
+	}
+
+	&__toogle,
+	&__more{
+		@include flex(flex-start,center);
+		position: relative;
+		height: 100%;
+		padding: 5px 0;
+		cursor: pointer;
+		.icon{
+			margin-left: 5px;
+		}
+	}
+
+	&__wrap{
+		@include flex(space-between, center);
+		padding: 5px 10px;
+	}
+
+	&__grid{
+		@include flex(space-between);
+	}
+
+	&__column{
+		flex: 1;
+		&:not(:nth-child(1)){
+			max-width: 16.6%;
+		}
+	}
+
+	&__info{
+		@include flex(center,flex-start,column);
+		@include size(100%, 50px);
+		padding: 5px 10px;
+		cursor: pointer;
+		.info{
+			&-date{
+				margin-right: 5px;
+				font-size: 12px;
+			}
+			&-score{
+				color: $primary;
+				font-size: 12px;
+			}
+		}
+	}
+
+	&__block{
+		@include flex(flex-start,center);
+	}
+
+	&__button{
+		@include flex(center,center);
+		@include size(100%, 50px);
+		cursor: pointer;
+		&:hover{
+			background-color: $third;
+		}
+		&--active{
+			background-color: $fifth;
+		}
+		.odds{
+			&-name{
+				margin: 0 2px;
+			}
+			&-value{
+				margin: 0 2px;
+				color: $primary;
+			}
+		}
+	}
+}

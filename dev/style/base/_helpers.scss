@@ -115,7 +115,10 @@
 .margin{
 	margin: 0!important;
 }
-
+.w-auto{
+	width: auto!important;
+	flex: 0!important;
+}
 .full-height{
 	height: 100%!important;
 }

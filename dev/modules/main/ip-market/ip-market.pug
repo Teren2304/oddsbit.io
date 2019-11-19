@@ -52,6 +52,28 @@ mixin ip-market-league-3
 			p.font--white England National League
 		.ip-market__drop
 
+mixin ip-market-league-4
+	.ip-market__league&attributes(attributes)
+		.ip-market__left
+			p.font--white League Table
+		.ip-market__update
+			p.font--white Updated base on live scores
+
+mixin ip-market-league-5
+	.ip-market__league&attributes(attributes)
+		.ip-market__left.w-auto
+			p.font--white.text-nowrap Full Time Results
+		.link-dropdown
+			span Change Market
+			.dropdown
+				ul.dropdown__wrap.scroll
+					li.dropdown__item
+						.dropdown__link.dropdown__link--active Full Time Results
+					li.dropdown__item
+						.dropdown__link Double Chance
+					li.dropdown__item
+						.dropdown__link Asian Corners
+
 mixin ip-market-subheader(val, number)
 	.ip-market__subheader&attributes(attributes)
 		- var a = 0;

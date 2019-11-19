@@ -1,20 +1,27 @@
 .gl-market-table{
 	display: table;
 	table-layout: fixed;
+	border-collapse: collapse;
 	background-color: #f2f2f2;
 	width: 100%;
 	border-left: 1px solid rgba(0,0,0,0.1);
 	&__column{
 		display: table-cell;
 		vertical-align: top;
-		border-right: 1px solid rgba(0,0,0,0.1);
+		border: 1px solid rgba(0,0,0,0.1);
+		border-bottom: 0;
+		&--4{
+			width: 4.8%;
+		}
 		&--12-3333{
 			width: 12.3333%;
+		}
+		&--27{
+			width: 27.1%;
 		}
 		&--50{
 			width: 50px;
 		}
-
 		&:first-child{
 			.gl-market-table{
 				&__cell{
@@ -29,6 +36,9 @@
 		@include flex(center, center);
 		height: $base-height + 2px;
 		border-bottom: 1px solid rgba(0,0,0,0.1);
+		&:last-child{
+			border-bottom: 0;
+		}
 		&--head{
 			background-color: #000;
 		}
@@ -62,5 +72,9 @@
 		&--active{
 			color: $primary;
 		}
+	}
+
+	&__count{
+		margin-right: 5px;
 	}
 }
