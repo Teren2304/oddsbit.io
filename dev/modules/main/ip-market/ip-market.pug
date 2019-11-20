@@ -92,6 +92,16 @@ mixin ip-market-subheader-v2(val, number)
 				while n < val
 					p.ip-market__text= n++
 
+mixin ip-market-subheader-v3
+	.ip-market__subheader&attributes(attributes)
+		p.ip-market__text Liverpool vs Man Utd
+		i.fal.fa-volume-up.ip-market__volume
+
+mixin ip-market-subheader-v4
+	.ip-market__subheader&attributes(attributes)
+		p.ip-market__text Liverpool vs Man Utd
+		.s-icon.s-icon--play-v2.sort-icon.ip-market__play
+
 mixin ip-market-body-big(val, top, number, only, tennis, disabled, radio)
 	.ip-market__body&attributes(attributes)
 		.ip-market__table

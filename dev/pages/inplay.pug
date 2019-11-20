@@ -1,35 +1,35 @@
 extends ../template/template.pug
 block content
-	+header
-	.main
-		.content.content--center
-			+ip-control
-			+ip-classification-bar
-			
-			.ip-market
-				+ip-market-alert
+	.page.page--full
+		+header
+		.main
+			.content.content--center.scroll
+				+ip-control
+				+ip-classification-bar
 				
-				+ip-market-header.ip-market__header--soccer
-				+ip-market-league(3)
-				+ip-market-body-big(1,false,3,true,true)
+				.ip-market
+					+ip-market-alert
+					
+					+ip-market-header.ip-market__header--soccer
+					+ip-market-league(3)
+					+ip-market-body-big(1,false,3,true,true)
 
-				+ip-market-league(2)
-				+ip-market-body-big(1,true,2)
+					+ip-market-league(2)
+					+ip-market-body-big(1,true,2)
 
-				+ip-market-league(3)
-				+ip-market-body-big(2,true,3)
+					+ip-market-league(3)
+					+ip-market-body-big(2,true,3)
 
-				+ip-market-league
-				+ip-market-body-big(3,true,2,false)
-				+ip-market-body-big(2,true,3,false)
-				+ip-market-body-big(3,true,4,false)
+					+ip-market-league
+					+ip-market-body-big(3,true,2,false)
+					+ip-market-body-big(2,true,3,false)
+					+ip-market-body-big(3,true,4,false)
 
-				+ip-market-league(3)
-				+ip-market-body-big(2,false,3,true,true)
-			+footer
-			
-		.content.content--right.content--wide
-			+ip-control-2
-			//- +ip-control-4
-			+lv-streaming
-			+bw-betslip
+					+ip-market-league(3)
+					+ip-market-body-big(2,false,3,true,true)
+				+footer
+				
+			.content.content--right.content--wide.scroll
+				+ip-control-2
+				+lv-streaming
+				+bw-betslip

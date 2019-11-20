@@ -1,0 +1,22 @@
+mixin ha-coupon
+	.ha-coupon&attributes(attributes)
+		+ha-coupon-table
+
+mixin ha-coupon-table
+	.ha-coupon__table&attributes(attributes)
+		.ha-coupon__row.ha-coupon__row--title
+			.ha-coupon__cell.ha-coupon__cell--50
+			.ha-coupon__cell.ha-coupon__cell--25
+				p.ha-coupon__subtitle.font--white 1
+			.ha-coupon__cell.ha-coupon__cell--25
+				p.ha-coupon__subtitle.font--white 1
+		- var a = 0;
+		while a < 10
+			.ha-coupon__row
+				.ha-coupon__cell.ha-coupon__cell--50
+					p.ha-coupon__text.text-ellipsis Text 1
+					p.ha-coupon__text.text-ellipsis Text 2
+				.ha-coupon__cell.ha-coupon__cell--25
+					+button-coff(a++).ha-coupon__btn
+				.ha-coupon__cell.ha-coupon__cell--25
+					+button-coff(a++).ha-coupon__btn

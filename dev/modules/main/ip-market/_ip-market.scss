@@ -41,6 +41,7 @@
 	&__subheader{
 		@include flex(flex-start, center);
 		background-color: #000;
+		height: $base-height;
 		.ip-market{
 			&__label{
 				flex: 1 1 100%;
@@ -409,6 +410,15 @@
 			font-weight: 500;
 			color: #fff;
 		}
+	}
+
+	&__volume,
+	&__play{
+		color: #fff;
+		margin-right: auto;
+		margin-left: 0;
+		font-size: 14px;
+		cursor: pointer;
 	}
 
 	.tennis-ss{

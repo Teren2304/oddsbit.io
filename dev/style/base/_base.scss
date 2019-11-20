@@ -18,14 +18,26 @@
 		border: 1px solid #373737;
 	}
 }
-
+.page{
+	@include flex(space-between, stretch, column);
+	&--full{
+		height: 100vh;
+		overflow: hidden;
+		.main{
+			height: calc(100vh - 114px);
+		}
+		.box{
+			height: calc(100vh - 150px);
+		}
+	}
+}
 .main,
-.wrap{
+.wrap,
+.box{
 	@include flex(center);
 	width: 100%;
 }
-
-.container{
+/* .container{
 	width: 95%;
 	max-width: $max-width;
 	min-width: $min-width;
@@ -36,7 +48,8 @@
 	width: 100%;
 	min-width: $min-width;
 	position: relative;
-}
+} 
+*/
 .content{
 	position: relative;
 	&--left{
@@ -65,18 +78,6 @@
 		width: 50%;
 	}
 }
-.left-scroll{
-	height: calc(100vh - 170px);
-}
-
-.center-scroll{
-	height: calc(100vh - 170px);
-}
-
-.right-scroll{
-	height: calc(100vh - 135px);
-}
-
 
 .shadow{
 	position: fixed;

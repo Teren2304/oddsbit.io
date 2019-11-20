@@ -1,0 +1,36 @@
+.ha-coupon{
+	&__row{
+		@include flex(space-between, stretch);
+		height: 40px;
+		&--title{
+			background-color: #000;
+			height: 28px;
+		}
+	}
+
+	&__cell{
+		@include flex(center, center, column);
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-right: 1px solid rgba(0,0,0,0.1);
+		height: 100%;
+		&--25{
+			width: 25%;
+		}
+		&--50{
+			width: 50%;
+		}
+	}
+	&__subtitle{
+		font-size: 12px;
+	}
+	&__text{
+		font-size: 12px;
+		margin-left: 10px;
+		display: block;
+		align-self: flex-start;
+	}
+	&__btn{
+		height: 100%;
+		flex-wrap: wrap;
+	}
+}
