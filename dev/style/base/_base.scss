@@ -27,7 +27,7 @@
 			height: calc(100vh - 114px);
 		}
 		.box{
-			height: calc(100vh - 150px);
+			height: calc(100vh - 148px);
 		}
 	}
 }
@@ -55,6 +55,10 @@
 	&--left{
 		min-width: 260px;
 		max-width: 260px;
+	}
+	&--tiny{
+		min-width: 64px;
+		max-width: 64px;
 	}
 	&--right{
 		min-width: 320px;

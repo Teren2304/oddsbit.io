@@ -14,7 +14,8 @@
 	}
 
 	&__dropdown{
-		width: 250px;
+		width: 300px;
+		transform: translateY(-10px);
 		&--active{
 			display: block!important;
 		}

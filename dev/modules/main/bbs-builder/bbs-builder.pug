@@ -1,0 +1,52 @@
+mixin bbs-builder
+	.bbs-builder&attributes(attributes)
+		+bbs-builder-alert
+		+bbs-builder-element.bbs-builder__element--line
+		+bbs-builder-element.bbs-builder__element--line
+		+bbs-builder-element
+		+bbs-builder-footer
+		+bbs-builder-manual
+		+bbs-builder-steps
+
+mixin bbs-builder-alert
+	.bbs-builder__alert&attributes(attributes)
+		p.font--md Add selection to start building your bet
+
+mixin bbs-builder-footer
+	.bbs-builder__footer&attributes(attributes)
+		button.btn.bbs-builder__btn
+			i.fal.fa-plus
+			span Add your selection
+		.bbs-builder__field
+			p Add to Bet Slip
+			p.font--bold.font--second 2.10
+
+
+mixin bbs-builder-manual
+	.bbs-builder__manual&attributes(attributes)
+		p How does Bet Builder work?
+		i.fal.fa-angle-down
+
+
+mixin bbs-builder-steps
+	.bbs-builder__dropdown&attributes(attributes)
+		p Bet Builder combines selections into a single bet with better odds
+		.bbs-builder__steps
+			.bbs-builder__step Mohamed Salah to Score First in the Match
+			.bbs-builder__plus
+			.bbs-builder__step Over 3 Goals in the Match for Both Teams Combined
+			.bbs-builder__plus
+			.bbs-builder__step Over 5 Cards in the Match for Both Teams Combined
+			.bbs-builder__equally
+			.bbs-builder__step.bbs-builder__step--last 41.00
+
+mixin bbs-builder-element
+	.bbs-builder__element&attributes(attributes)
+		div
+			p 
+				span Both Teams to Score in the
+				a Match
+				a Yes
+			a.fal.fa-times
+		div
+			p Both Teams to Score in the

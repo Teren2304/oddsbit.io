@@ -1,5 +1,107 @@
 mixin modal-alert
 	.modal.modal--alert&attributes(attributes)
-		p.font--lg You need to allow notifications in Chrome
-		p.font Select 'Secure' at the beginning of the URL address bar, select the 'Notifications' drop-down, select allow.
-		button.btn.btn--primary Ok
+		p.font--lg.modal__title You need to allow notifications in Chrome
+		p.font.modal__title Select 'Secure' at the beginning of the URL address bar, select the 'Notifications' drop-down, select allow.
+		button.btn.btn--primary.modal__btn Ok
+
+mixin modal-betslip-active
+	.modal.modal--betslip&attributes(attributes)
+		a.fal.fa-times.modal__close
+		.modal__content
+			p.font--lg.modal__title Selection on Bet Slip
+			p.font.modal__title Your existing selections will need to be cleared to enable Quick Bet.
+		.modal__footer.padding.border
+			button.btn.btn--primary.modal__btn.mr Abctivate Quick Bet
+			button.btn.btn--primary.modal__btn.ml Back To bet Slip
+
+mixin modal-login
+	.modal.modal--login&attributes(attributes)
+		a.fal.fa-times.modal__close
+		.modal__content
+			p.modal__title.font--lg Live Streaming Available.Please log in to view
+			input.field.modal__field(type="text", placeholder="Username")
+			input.field.modal__field(type="password", placeholder="Password")
+			button.btn.btn--primary.modal__button Log In
+		.modal__footer
+			a.modal__link Lost Login?
+			a.modal__link Do you need help?
+
+		.modal__help
+			a(href="")
+				i.fal.fa-comments 
+				span Live Chat
+			a(href="")
+				i.fal.fa-envelope
+				span Email
+
+mixin modal-builder
+	.modal.modal--builder&attributes(attributes)
+		.modal__header.modal__header--primary.modal__header--start
+			a.fal.fa-angle-left.modal__back
+			p.font--white Choose Market
+			a.fal.fa-times.modal__close.modal__close--default
+		.modal__header.modal__header--border.modal__header--start
+			p.text-underline Over
+			p.text-underline 2.5 Goals
+			p int he Match
+			p.text-underline Valencia
+		.modal__content.padding
+			.modal__market Player to Score
+			.modal__market Result
+			.modal__market Double Chance
+			.modal__market Player to Score
+			.modal__market Result
+			.modal__market Double Chance
+			.modal__market Player to Score
+			.modal__market Result
+			.modal__market Double Chance
+			.modal__market Player to Score
+			.modal__market Result
+			.modal__market.modal__market--active Double Chance
+
+		.modal__footer.padding.border
+			button.btn.btn--coff.modal__button
+				span.btn__odds 19.00
+				span.btn__text Bet Builder Odds
+			button.btn.btn--primary.modal__button Add To this Selection
+
+
+mixin modal-game-alert
+	.modal.modal--games&attributes(attributes)
+		a.fal.fa-times.modal__close
+		p.font--lg.modal__title Live Match Alert
+		p.font.modal__title NBA
+		.modal__tabs
+			a.modal__tab.modal__tab--active Matches
+			a.modal__tab Teams
+		.modal__dropdown
+			span Choose the alert revceiver
+			i.fal.fa-angle-down
+		.modal__content.padding
+			.modal__check.modal__check--border
+				span.text-ellipsis Lorem ipsum dolor sit amet
+				i.fal.fa-check-circle.check
+			.modal__check.modal__check--border
+				span.text-ellipsis Lorem ipsum dolor sit amet
+				i.fal.fa-check-circle.check
+			.modal__check.modal__check--border.modal__check--active
+				span.text-ellipsis Lorem ipsum dolor sit amet
+				i.fal.fa-check-circle.check
+			.modal__check.modal__check--border
+				span.text-ellipsis Lorem ipsum dolor sit amet
+				i.fal.fa-check-circle.check
+		
+		.modal__date Sundey 01 Dec
+		.modal__content.padding.flex.flex-wrap
+			.modal__check.half-width
+				span.text-ellipsis Lorem ipsum dolor sit amet
+				i.fal.fa-check-circle.check
+			.modal__check.half-width
+				span.text-ellipsis Lorem ipsum dolor sit amet
+				i.fal.fa-check-circle.check
+			.modal__check.half-width
+				span.text-ellipsis Lorem ipsum dolor sit amet
+				i.fal.fa-check-circle.check
+	
+		.modal__footer.padding.border
+			button.btn.btn--primary.modal__btn.ma Done

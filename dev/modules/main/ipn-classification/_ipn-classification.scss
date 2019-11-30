@@ -293,3 +293,54 @@
 	}
 
 }
+
+
+
+/* .content{
+	&--tiny{
+		min-width: 60px!important;
+		max-width: 60px!important;
+		overflow: visible!important;
+		.ipn-classification{
+			&__link{
+				&:not(.ipn-classification__link--controll){
+					display: none;
+				}
+				&--controll{
+					transform: rotateZ(180deg);
+				}
+			}
+			&__alert{
+				display: none;
+			}
+			&__category{
+				.text-ellipsis{
+					display: none;
+				}
+			}
+			&__icon{
+				display: none;
+			}
+			
+			&__category {
+				padding: 5px;
+			}
+
+			&__league,
+			&__match{
+				position: absolute;
+				right: 0;
+				transform: translateX(100%);
+				z-index: 2;
+				padding-right: 30px;
+				min-width: 200px;
+			}
+			&__favourite{
+				display: block;
+				top: 50%;
+				right: 10px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+} */

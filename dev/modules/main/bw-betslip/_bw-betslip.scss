@@ -20,23 +20,79 @@ $betslip:(
 		text-align: center;	
 		@include flex(center, stretch);
 		&_Item{
-			color: $second;
 			font-size: 16px;
+			cursor: pointer;
 			position: relative;
+			margin: 0 10px;
+			color: #fff;
 			@include flex(center, center);
-			&:before{
-				content: '';
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				right: 0;
-				height: 3px;
-				background-color: $second;
+			&:hover{
+				color: $second;
+			}
+			&-active{
+				color: $second;
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					height: 3px;
+					background-color: $second;
+				}
 			}
 		}
 	}
 }
-
+.mbr{
+	&-OpenBetHeaderScoller{
+		&_ScrollContent{
+			background-color: #000;
+			height: $base-height;
+			overflow: hidden;
+			@include flex(flex-start,center);
+		}
+	}
+	&-MyBetsHeaderRhs_Button,
+	&-MyBetsHeaderRhs_ButtonSelected{
+		@include flex(center,center);
+		height: 100%;
+		color: rgba(255,255,255,0.7);
+		font-size: 12px;
+		padding: 5px 10px;
+		white-space: nowrap;
+		cursor: pointer;
+		&:hover{
+			color: rgba(255,255,255,1);
+		}
+	}
+	&-MyBetsHeaderRhs_ButtonSelected{
+		position: relative;
+		color: rgba(255,255,255,1);
+		.mbr-MyBetsHeaderRhs_DummyBarSlider-displayanimation{
+			height: 3px;
+			background-color: #fff;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&-BetItemsContainerRhs{
+		&_EmptyMessage{
+			opacity: 1;
+			padding: 30px 10px;
+			&-animateinsert{
+				opacity: 0;
+			}
+		}
+		&_EmptyMessageLineOne,
+		&_EmptyMessageLineTwo{
+			text-align: center;
+			color: #000;
+		}
+	}
+}
 .qb-Btn{
 	@include flex(flex-start, center);
 	&_Text-quick{
@@ -68,7 +124,7 @@ $betslip:(
 	&-ChangeSlipTypeContainer{
 		height: $base-height;
 		padding: 5px 10px;
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 		background-color: $primary;
 		@include flex(flex-start, center);
 	}
@@ -116,12 +172,12 @@ $betslip:(
 		padding-top: 5px;
 	}
 	&-Dropdown_Items{
-		border: 1px solid #000;
+		border: 1px solid rgba(0,0,0,0.3);
 	}
 	&-Dropdown_Item{
 		@include flex(flex-start, center);
 		@include size(100%, $base-height);
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 		cursor: pointer;
 		position: relative;
 		white-space: nowrap;
@@ -156,7 +212,7 @@ $betslip:(
 
 	&-Header_RemoveAll{
 		padding: 5px 10px;
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 	}
 	&-Header_RemoveAllLink{
 		color: #000;
@@ -169,7 +225,7 @@ $betslip:(
 	&-SingleItem{
 		padding: 10px 0;
 		overflow: hidden;
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 		&.oddsChange{
 			.bs{	
 				&-Odds{
@@ -182,7 +238,7 @@ $betslip:(
 		&.bs-BetBuilderIncompatibleSelections{
 			.bs{
 				&-RestrictedBet{
-					background-color: $primary;
+					background-color: $fifth;
 				}
 			}
 		}
@@ -218,6 +274,7 @@ $betslip:(
 	&-Selection_Desc{
 		color: #000;
 		font-size: 16px;
+		font-weight: bold;
 	}
 	&-Selection_Details{
 		color: #000;
@@ -289,15 +346,15 @@ $betslip:(
 	}
 	&-MultipleBets_Header{
 		padding: 5px 10px;
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 	}
 	&-MultipleBets_StakeRow,
 	&-MultipleBets_BetRow{
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 	}
 	&-MultipleBets_SubHeader{
 		padding: 5px 10px;
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 	}
 	&-MultipleBets_SubHeaderContainer{
 		@include flex(flex-start, center);
@@ -364,8 +421,22 @@ $betslip:(
 	&-MultipleBets_Error{
 		padding: 5px 10px;
 		text-align: center;
-		border-bottom: 1px solid #000;
+		position: relative;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 		background-color: map-get($betslip, message-color);
+		&.hidden{
+			.bs-MultipleBets_RestrictedBet{
+				display: none;
+			}
+		}
+		.bs-MultipleBets_RestrictedBet{
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 3px;
+			background-color: $fifth;
+		}
 	}
 	&-MultipleBets_RestrictedText{
 		color: #000;
@@ -374,7 +445,7 @@ $betslip:(
 		padding: 5px 10px;
 		text-align: center;
 		position: relative;
-		border-bottom: 1px solid #000;
+		border-bottom: 1px solid rgba(0,0,0,0.3);
 		background-color: map-get($betslip, message-color);
 		&.hidden{
 			display: none;
@@ -418,15 +489,15 @@ $betslip:(
 		}
 
 		&.placeBet{
-			background-color: $fifth;
+			background-color: $second;
 			.bs{
 				&-TotalStake{
 					margin-right: 5px;
-					color: #fff;
+					color: #000;
 					font-weight: bold;
 				}
 				&-BtnText{
-					color: #fff;
+					color: #000;
 				}
 			}
 		}
@@ -436,6 +507,31 @@ $betslip:(
 			.bs{
 				&-BtnAccept{
 					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.content{
+	&--right{
+		&:not(.content--wide){
+			.bs{
+				&-Stake_TextBox{
+					width: 80px;
+				}
+				&-MultipleBets{
+					&_Stake{
+						margin-right: 0;
+						width: 100px;
+					}
+					&_StakeData{
+						flex: 1;
+						width: auto;
+					}
 				}
 			}
 		}

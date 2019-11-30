@@ -1,0 +1,126 @@
+.bbs-builder{
+	&__alert{
+		padding: 30px;
+		text-align: center;
+	}
+	&__footer{
+		@include flex(space-between, center);
+		height: $base-height;
+	}
+	&__btn{
+		@include size(70%, 100%);
+		justify-content: flex-start;
+		* {
+			margin: 0 2px;
+		}
+		i{
+			color: $primary;
+		}
+		&:hover{
+			background-color: darken($third, 10%);
+		}
+	}
+	&__field{
+		@include size(30%, 100%);
+		@include flex(center,center);
+		text-align: center;
+		background-color: $third;
+		cursor: pointer;
+		*{
+			margin: 0 2px;
+		}
+	}
+
+	&__manual{
+		@include flex(center,center);
+		padding: 30px;
+		cursor: pointer;
+		* {
+			margin: 0 2px;
+		}
+	}
+	&__instruction{
+		@include flex(center,center);
+		padding: 30px;
+		* {
+			margin: 0 2px;
+		}
+	}
+	&__dropdown{
+		text-align: center;
+	}
+	&__steps{
+		@include flex(center,stretch);
+		padding: 30px;
+	}
+	&__step{
+		@include flex(center,center);
+		padding: 10px;
+		min-height: 50px;
+		min-width: 100px;
+		border: 1px solid rgba(0,0,0,0.1);
+		&--last{
+			font-size: 24px;
+		}
+	}
+	&__plus,
+	&__equally{
+		align-self: center;
+		&:before{
+			font-size: 24px;
+			color: $primary;
+			margin: 0 5px;
+		}
+	}
+	&__plus{
+		&:before{
+			content: '+';
+		}
+	}
+	&__equally{
+		&:before{
+			content: '=';
+		}
+	}
+	&__element{
+		padding: 0 10px 0 25px;
+		position: relative;
+		margin-bottom: 20px;
+		&:before{
+			@include size(10px);
+			content: '';
+			border-radius: 50%;
+			border: 1px solid rgba(0,0,0,0.2);
+			position: absolute;
+			left: 10px;
+			top: 12px;
+		}
+		&--line{	
+			&:after{
+				content: '';
+				position: absolute;
+				width: 2px;
+				height: 72px;
+				left: 14px;
+				top: 22px;
+				transition: all .5s;
+				background-color: rgba(0,0,0,0.2);
+			}
+		}
+		div{
+			@include flex(flex-start, center);
+			padding: 5px 0;
+			*{
+				margin-right: 3px;
+			}
+		}
+		a{
+			&:not(.fal){
+				border-bottom: 1px solid $primary;
+			}
+			&:hover{
+				color: $primary;
+			}
+		}
+	}
+}

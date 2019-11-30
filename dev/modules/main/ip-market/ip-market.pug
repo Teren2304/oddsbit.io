@@ -74,6 +74,12 @@ mixin ip-market-league-5
 					li.dropdown__item
 						.dropdown__link Asian Corners
 
+mixin ip-market-league-6
+	.ip-market__league&attributes(attributes)
+		.ip-market__left
+			p.font--white BetBuilder
+		.ip-market__clear Clear
+
 mixin ip-market-subheader(val, number)
 	.ip-market__subheader&attributes(attributes)
 		- var a = 0;
@@ -175,7 +181,6 @@ mixin ip-market-body-big(val, top, number, only, tennis, disabled, radio)
 						span 152
 						i.fal.fa-angle-right.ip-competition__icon
 
-
 mixin ip-market-body-range
 	.ip-market__body&attributes(attributes)
 		.ip-market__group
@@ -195,6 +200,19 @@ mixin ip-market-body-range
 						span.rangeScale__item 1
 						span.rangeScale__item 2
 						span.rangeScale__item 3
+
+			.wrap.wrap--last
+				+button-coff("123")
+
+mixin ip-market-body-range-v2
+	.ip-market__body&attributes(attributes)
+		.ip-market__group
+			.wrap
+				p Birmingham
+				+mcs-selector
+			.wrap
+				p Birmingham
+				+mcs-selector
 
 			.wrap.wrap--last
 				+button-coff("123")

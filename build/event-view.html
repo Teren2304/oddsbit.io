@@ -11,7 +11,7 @@
     <div class="page page--full">
         <div class="header">
           <div class="hm-nav hm-nav--primary"><a class="hm-logo" href="/"><img src="./img/hm-logo/logo.svg" alt=""></a>
-              <menu class="hm-menu"><a class="hm-menu__item hm-menu__item--active" href="index.html">Sports</a><a class="hm-menu__item" href="inplay.html">In-Play</a><a class="hm-menu__item" href="#">Live Casino</a><a class="hm-menu__item" href="#">Games</a><a class="hm-menu__item" href="#">Poker</a><a class="hm-menu__item" href="#">Vegas</a><a class="hm-menu__item" href="#">Bingo</a></menu>
+              <menu class="hm-menu"><a class="hm-menu__item hm-menu__item--active" href="index.html">Sports</a><a class="hm-menu__item" href="inplay.html">In-Play</a><a class="hm-menu__item" href="login.html">My Bets</a></menu>
               <div class="hm-login">
                 <div class="hm-login__wrap">
                   <input class="field hm-login__field" type="text" placeholder="Username"><a class="font--xs hm-login__link" href="#">Join</a>
@@ -26,8 +26,8 @@
               <div class="hm-search">
                 <input class="field hm-search__field" type="text" placeholder="Search">
                 <div class="hm-search__wrap">
-                  <button class="btn btn--square btn--primary hm-search__btn"><i class="far fa-microphone-alt"></i></button>
-                  <button class="btn btn--square btn--primary hm-search__btn"><i class="fal fa-times"></i></button>
+                  <button class="btn btn--square hm-search__btn"><i class="far fa-microphone-alt"></i></button>
+                  <button class="btn btn--square hm-search__btn"><i class="fal fa-times"></i></button>
                 </div>
               </div>
               <div class="hm-submenu">
@@ -93,7 +93,7 @@
         </div>
         <div class="content content--right content--wide">
             <div class="ip-control ip-control--v2">
-              <div class="btn btn--square btn--primary ip-control__btn"><i class="fal fa-volume-up"></i>
+              <div class="btn btn--square ip-control__btn"><i class="fal fa-volume-up"></i>
                 <div class="dropdown dropdown--volume">
                   <ul class="dropdown__wrap scroll">
                     <li class="dropdown__item">
@@ -109,10 +109,10 @@
                   </ul>
                 </div>
               </div>
-              <div class="ip-control__menu"><a class="font--m-white ip-control__link ip-control__link--active">Live Stream</a><a class="font--m-white ip-control__link">Match Live</a></div>
+              <div class="ip-control__menu"><a class="font--m-white ip-control__link ip-control__link--live-stream ip-control__link--active">Live Stream</a><a class="font--m-white ip-control__link ip-control__link--match-live">Match Live</a></div>
               <div class="ip-control__wrap">
-                <button class="btn btn--square btn--primary ip-control__btn"><i class="fal fa-expand-alt"></i></button>
-                <button class="btn btn--square btn--primary ip-control__btn"><i class="fal fa-angle-down"></i></button>
+                <button class="btn btn--square ip-control__btn"><i class="fal fa-expand-alt"></i></button>
+                <button class="btn btn--square ip-control__btn"><i class="fal fa-angle-down"></i></button>
               </div>
             </div>
         </div>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--closed">
                   <p class="text-ellipsis">Soccer</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--closed">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -163,7 +163,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--open">
                   <p class="text-ellipsis">Soccer</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--open">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--closed">
                   <p class="text-ellipsis">Tennis</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--closed">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -261,7 +261,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--open">
                   <p class="text-ellipsis">Tennis</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--open">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -326,7 +326,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--closed">
                   <p class="text-ellipsis">Basketball</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--closed">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -359,7 +359,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--open">
                   <p class="text-ellipsis">Basketball</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--open">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -424,7 +424,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--closed">
                   <p class="text-ellipsis">Hockey</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--closed">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -457,7 +457,7 @@
                 </div>
                 <div class="ipn-classification__category ipn-classification__category--open">
                   <p class="text-ellipsis">Hockey</p>
-                  <!-- .ipn-classification__img.s-sports.s-sports--tennis--><a class="ipn-classification__icon"></a>
+                  <div class="ipn-classification__img s-sports s-sports--tennis"></div><a class="ipn-classification__icon"></a>
                 </div>
                 <div class="ipn-classification__league ipn-classification__league--open">
                   <p class="text-ellipsis">Ukraine</p><a class="ipn-classification__icon"></a><a class="ipn-classification__favourite"></a>
@@ -1563,6 +1563,30 @@
                 </div>
               </div>
             </div>
+            <div class="ip-market__body">
+              <div class="ip-market__group">
+                <div class="wrap">
+                  <p>Birmingham</p>
+                    <div class="mcs-selector">
+                      <button class="mcs-selector__btn mcs-selector__btn--disabled">-</button>
+                      <div class="mcs-selector__text">0</div>
+                      <button class="mcs-selector__btn">+</button>
+                    </div>
+                </div>
+                <div class="wrap">
+                  <p>Birmingham</p>
+                    <div class="mcs-selector">
+                      <button class="mcs-selector__btn mcs-selector__btn--disabled">-</button>
+                      <div class="mcs-selector__text">0</div>
+                      <button class="mcs-selector__btn">+</button>
+                    </div>
+                </div>
+                <div class="wrap wrap--last">
+                    <button class="btn btn--coff"><span class="btn__name">123</span><span class="btn__odds">1.95</span>
+                    </button>
+                </div>
+              </div>
+            </div>
           <div class="ip-market__few">
             <div class="ip-market__subblock">
                 <div class="ip-market__league ip-market__league--primary">
@@ -1718,6 +1742,43 @@
               <ul class="betSlip full-text" data-ub="0.00" data-txr="0,-1,0,1,1#" data-tcm="0" data-bsuis="0" data-xrte="1" data-xrte-us="1" data-stk-inc="0-0.2*0.2#0.2-250*1#250-500*5#500-1000*10#1000-2500*50#2500-5000*100#5000-10000*100#10000-25000*100#25000-50000*100#50000-99999999*100" data-stk-mlt-inc="0-0.1*0.1#0.1-250*1#250-500*5#500-1000*10#1000-2500*50#2500-5000*100#5000-10000*100#10000-25000*100#25000-50000*100#50000-99999999*100" data-isocode="USD" data-betguid="" data-cus="N" data-mod="0#0" data-restrictedmultiples="378742242|378742243" data-minstake="0" data-equally-divided="False">
                 <div class="bw-BetslipHeader">
                   <div class="bw-BetslipHeader_Item bw-BetslipHeader_Item-active">Bet Slip</div>
+                  <div class="bw-BetslipHeader_Item">My Bets</div>
+                </div>
+                <div>
+                  <div>
+                    <div>
+                      <div class="mbr-MyBetsRhs">
+                        <div class="mbr-MyBetsHeaderRhs mbr-MyBetsHeaderRhs-empty">
+                          <div class="mbr-OpenBetHeaderScrollable">
+                            <div class="mbr-OpenBetHeaderScoller">
+                              <div class="mbr-OpenBetHeaderScoller_LeftArrow mbr-OpenBetHeaderScoller_Hidden mbr-OpenBetHeaderScoller_Dis"></div>
+                              <div class="mbr-OpenBetHeaderScoller_HScroll">
+                                <div class="mbr-MyBetsHeaderRhs_Container mbr-MyBetsHeaderRhs_ButtonContainer mbr-OpenBetHeaderScoller_ScrollContent" style="left: 0px;">
+                                  <div class="Hidden mbr-MyBetsHeaderRhs_Button">Cash Out</div>
+                                  <div class="mbr-MyBetsHeaderRhs_Button">Live</div>
+                                  <div class="mbr-MyBetsHeaderRhs_Button">Unsettled</div>
+                                  <div class="mbr-MyBetsHeaderRhs_Button">Settled</div>
+                                  <div class="mbr-MyBetsHeaderRhs_ButtonSelected">All
+                                    <div class="mbr-MyBetsHeaderRhs_DummyBarSlider mbr-MyBetsHeaderRhs_DummyBarSlider-displayanimation"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mbr-OpenBetHeaderScoller_RightArrow mbr-OpenBetHeaderScoller_Hidden"></div>
+                            </div>
+                          </div><span class="mbr-MyBetsHeaderRhs_Slider mbr-MyBetsHeaderRhs_Slider-opacityanimation" style="left: 180px; width: 25px; transform-origin: left center; transition: transform 200ms ease 0s;"></span>
+                        </div>
+                        <div class="mbr-BetItemsContainerRhs">
+                          <div class="mbv-EditBetsContainer"></div>
+                          <div>
+                            <div class="mbr-BetItemsContainerRhs_EmptyMessage">
+                              <div class="mbr-BetItemsContainerRhs_EmptyMessageLineOne">You have no bets</div>
+                              <div class="mbr-BetItemsContainerRhs_EmptyMessageLineTwo">Come back to Edit, Cash Out or find out the status of your most recent bets</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <li class="bs-Header" data-text="The fastest way for placing single bets">
                   <div class="bs-ChangeSlipTypeContainer">
@@ -2003,9 +2064,9 @@
     </div>
     <div class="shadow shadow--v-modal" style="display: none;">
         <div class="modal modal--alert">
-          <p class="font--lg">You need to allow notifications in Chrome</p>
-          <p class="font">Select 'Secure' at the beginning of the URL address bar, select the 'Notifications' drop-down, select allow.</p>
-          <button class="btn btn--primary">Ok</button>
+          <p class="font--lg modal__title">You need to allow notifications in Chrome</p>
+          <p class="font modal__title">Select 'Secure' at the beginning of the URL address bar, select the 'Notifications' drop-down, select allow.</p>
+          <button class="btn btn--primary modal__btn">Ok</button>
         </div>
     </div>
     <script src="./js/custom.js"></script>

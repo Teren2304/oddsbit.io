@@ -18,10 +18,13 @@
 	}
 	&__btn{
 		margin-right: 1px;
+		background-color: rgba(0,0,0,0);
+		color: rgba(255,255,255,0.6);
 		&:last-child{
 			margin-right: 0;
 		}
 		&:hover{
+			color: rgba(255,255,255,1);
 			.dropdown{
 				display: block;
 			}
@@ -77,6 +80,43 @@
 					&:after{
 						content: '\f026';
 						color: $second;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.content{
+	&--right{
+		&:not(.content--wide){
+			.ip-control{
+				&__link{
+					@include size(28px, 18px);
+					font-size: 0;
+					border: none;
+					cursor: pointer;
+					background-color: transparent;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					position: relative;
+					margin: 0 5px;
+					transform: translateX(50%);
+					&:after{
+						display: none;
+					}
+					&--live-stream{
+						background-image: url(../img/icon-sport/ML1BW-v2.svg);
+						&:hover{
+							background-image: url(../img/icon-sport/ML1.svg);
+						}
+					}
+					&--match-live{
+						background-image: url(../img/icon-sport/MLVideo-v2.svg);
+						&:hover{
+							background-image: url(../img/icon-sport/MLVideo-v2.svg);
+						}
 					}
 				}
 			}

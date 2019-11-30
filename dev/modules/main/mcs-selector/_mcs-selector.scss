@@ -1,0 +1,26 @@
+.mcs-selector{
+	@include flex(center, center);
+	margin-top: 10px;
+
+	&__btn{
+		@include size(38px);
+		font-size: 24px;
+		background-color: rgba(0,0,0,0);
+		border: 1px solid rgba(0,0,0,0.2);
+		color: rgba(0,0,0,0.6);
+		&:hover,
+		&--active{
+			background-color: $primary;
+			color: #fff;
+		}
+		&--disabled{
+			pointer-events: none;
+			color: rgba(0,0,0,0.3);
+		}
+	}
+
+	&__text{
+		margin: 0 10px;
+		font-size: 24px;
+	}
+}
