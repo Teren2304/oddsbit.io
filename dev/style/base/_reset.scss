@@ -12,8 +12,8 @@ body{
 	background-color: $base-background-color;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow-x: hidden;
-	overflow-y: auto;
+	//overflow-x: hidden;
+	//overflow-y: auto;
 	
 	&::-webkit-scrollbar{
 		width: 8px

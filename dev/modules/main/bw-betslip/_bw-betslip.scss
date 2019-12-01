@@ -43,6 +43,19 @@ $betslip:(
 			}
 		}
 	}
+	&-BetslipMyBetsButton_Count{
+		@include flex(center, center);
+		@include size(15px);
+		border-radius: 50%;
+		background-color: $second;
+		color: #000;
+		font-size: 12px;
+		font-weight: bold;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translateX(15px);
+	}
 }
 .mbr{
 	&-OpenBetHeaderScoller{
@@ -513,8 +526,97 @@ $betslip:(
 	}
 }
 
-
-
+.mbr-OpenBetItemRhs{
+	&_OpenBetContainer{
+	}
+}
+.mbr-OpenBetItemHeaderRhs{
+	height: $base-height;
+	background-color: $primary;
+	&_BetDetailsContainer{
+		@include flex(flex-start, center);
+		padding: 5px 10px;
+		height: 100%;
+	}
+	&_BetStake{
+		color: #fff;
+	}
+	&_BetName{
+		color: #fff;
+		margin-left: 5px;
+	}
+}
+.mbr-MessageSubHeaderRhs-warning{
+	padding: 10px;
+	text-align: center;
+	&.Hidden{
+		display: none;
+	}
+	&.mbr-MessageSubHeaderRhs{
+	}
+	&.mbr-OpenBetItemRhs_MessageSubHeader{
+	}
+} 
+.mbr-OpenBetParticipantRhs{
+	margin-left: 15px;
+	&_ParticipantIconWrapper{
+		position: absolute;
+		left: -15px;
+		top: 5px;
+		@include size(8px);
+		border-radius: 50%;
+		background-color: $sixth;
+	}
+	&_Header{
+		@include flex(space-between, center);
+	}
+	&_HeaderText{
+		position: relative;
+	}
+	&_HeaderOdds{
+		font-size: 16px;
+		font-weight: bold;
+	}
+	&_Fixture-active{
+		@include flex(flex-start, center);
+	}
+	&_FixtureDescriptionText{
+		margin-right: 5px;
+	}
+	.mbr-OpenBetScoresRhs{
+		@include flex(flex-start, center);
+		&_ScoreWrapper,
+		&_InnerWrapper,
+		&_TeamGoalMarker,
+		&_Time{
+			margin-right: 5px;
+		}
+		&_ScoreWrapper{
+			color: $fifth;
+		}
+	}
+}
+.mbr-OpenBetItemRhsDetails{
+	&_ParticipantContainer{
+		padding: 10px;
+	}
+	&_BetInfoContainer{
+		background-color: lighten($third, 15%);
+		border-top: 1px solid rgba(0,0,0,0.1);
+	}
+	&_BetInfo{
+		@include flex(flex-start, center);
+		padding: 10px;
+	}
+	&_StakeInfo,
+	&_ReturnInfo{
+		width: 50%;
+	}
+	&_ReturnLabel,
+	&_ReturnText{
+		margin: 2px 0;
+	}
+}
 
 .content{
 	&--right{

@@ -20,9 +20,12 @@
 }
 .page{
 	@include flex(space-between, stretch, column);
+	width: 100%;
+	min-width: 1366px;
+	overflow-x: scroll;
 	&--full{
 		height: 100vh;
-		overflow: hidden;
+		overflow-y: hidden;
 		.main{
 			height: calc(100vh - 114px);
 		}
@@ -37,24 +40,11 @@
 	@include flex(center);
 	width: 100%;
 }
-/* .container{
-	width: 95%;
-	max-width: $max-width;
-	min-width: $min-width;
-	margin: 0 auto;
-	position: relative;
-}
-.container-fluid{
-	width: 100%;
-	min-width: $min-width;
-	position: relative;
-} 
-*/
 .content{
 	position: relative;
 	&--left{
-		min-width: 260px;
-		max-width: 260px;
+		min-width: 200px;
+		max-width: 200px;
 	}
 	&--tiny{
 		min-width: 64px;
@@ -65,8 +55,11 @@
 		max-width: 320px;
 	}
 	&--wide{
-		min-width: 550px;
-		max-width: 550px;
+		//min-width: 550px;
+		//max-width: 550px;
+		min-width: 465px;
+		max-width: 590px;
+		width: 32%;
 	}
 	&--center{
 		min-width: 270px;
@@ -82,7 +75,6 @@
 		width: 50%;
 	}
 }
-
 .shadow{
 	position: fixed;
 	left: 0;

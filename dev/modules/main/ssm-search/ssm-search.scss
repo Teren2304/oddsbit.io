@@ -4,7 +4,7 @@
 
 	&__header{
 		@include flex(flex-start, stretch);
-		height: 42px;
+		height: $base-height;
 		padding: 0 5px;
 		border-bottom: 1px solid $third;
 		overflow-x: hidden;
@@ -19,7 +19,7 @@
 		white-space: nowrap;
 		color: rgba(255,255,255,0.6);
 		&:after{
-			@include size(0, 3px);
+			@include size(0, 2px);
 			content: '';
 			position: absolute;
 			left: 0;
