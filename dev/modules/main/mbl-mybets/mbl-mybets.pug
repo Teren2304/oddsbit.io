@@ -1,0 +1,54 @@
+mixin mbl-mybets
+	.mbl-mybets&attributes(attributes)
+		+mbl-mybets-alert
+		+mbl-mybets-slider
+		+mbl-mybets-title
+		+mbl-mybets-item
+		+mbl-mybets-older.btn
+
+
+mixin mbl-mybets-title
+	.mbl-mybets__title&attributes(attributes)
+		p.mbl-mybets__title-stake 12,00 mB Single
+		p.mbl-mybets__title-hidden Almagro or Draw
+		p.mbl-mybets__title-lost Lost
+
+mixin mbl-mybets-alert
+	.mbl-mybets__alert&attributes(attributes)
+		p There are no Unsettled bets
+		p Any of your Unsettled bets will appear here
+
+mixin mbl-mybets-slider
+	.mbl-mybets__slider&attributes(attributes)
+		.mbl-mybets__prev
+			i.fal.fa-angle-left
+		.mbl-mybets__wrap
+			.mbl-mybets__btn.mbl-mybets__btn--active All Sports
+			.mbl-mybets__btn Soccer
+		.mbl-mybets__next
+			i.fal.fa-angle-right
+
+
+mixin mbl-mybets-item
+	.mbl-mybets__item&attributes(attributes)
+		.mbl-mybets__item-close
+			i.fal.fa-times
+		.mbl-mybets__item-wrap
+			p Almagro or Draw
+			p.mbl-mybets__item-odds 6.00
+		.mbl-mybets__item-wrap
+			p Double Chance
+		.mbl-mybets__item-wrap
+			p Instituto AC Cordoba
+			p v
+			p Almagro
+
+		.mbl-mybets__item-footer
+			div
+				p Stake 12,00 mB
+			div
+				p Return 0,00 mb
+
+mixin mbl-mybets-older
+	.mbl-mybets__older&attributes(attributes)
+		span View older Bets

@@ -11,7 +11,7 @@
     <div class="page">
         <div class="header">
           <div class="hm-nav hm-nav--primary"><a class="hm-logo" href="/"><img src="./img/hm-logo/logo.svg" alt=""></a>
-              <menu class="hm-menu"><a class="hm-menu__item hm-menu__item--active" href="index.html">Sports</a><a class="hm-menu__item" href="inplay.html">In-Play</a><a class="hm-menu__item" href="login.html">My Bets</a></menu>
+              <menu class="hm-menu"><a class="hm-menu__item hm-menu__item--active" href="index.html">Sports</a><a class="hm-menu__item" href="inplay.html">In-Play</a><a class="hm-menu__item" href="my-bets.html">My Bets</a></menu>
               <div class="hm-login">
                 <div class="hm-login__wrap">
                   <input class="field hm-login__field" type="text" placeholder="Username"><a class="font--xs hm-login__link" href="#">Join</a>
@@ -19,7 +19,7 @@
                 <div class="hm-login__wrap">
                   <input class="field hm-login__field" type="text" placeholder="Password"><a class="font--xs hm-login__link" href="#">Lost login?</a>
                 </div>
-                <div class="hm-login__wrap"><a class="btn btn--square hm-login__btn" href="#"><i class="fal fa-angle-right icon"></i></a></div>
+                <div class="hm-login__wrap"><a class="btn btn--square hm-login__btn" href="login.html"><i class="fal fa-angle-right icon"></i></a></div>
               </div>
           </div>
           <div class="hm-nav hm-nav--second">
@@ -134,8 +134,8 @@
         </div>
         <div class="content content--center">
             <div class="wc-home-header"><i class="fal fa-home wc-home-header__icon"></i></div>
-          <div class="content--main">
-            <div class="content__left">
+          <div class="content--main" id="content-main-column">
+            <div class="content__left" id="content-left-column">
                 <div class="ool-open-offers">
                   <div class="ool-open-offers__img" style="background-image: url('./img/ool-open-offers/1.jpg')">
                     <div class="ool-open-offers__wrap">
@@ -190,10 +190,10 @@
                   <p class="font--white">England National League</p>
                 </div>
                 <div class="li-inplay__event-header">
-                  <p class="li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
+                  <p class="text-ellipsis li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
                   <div class="li-inplay__event-header-wrap">
-                    <div class="li-inplay__event-header-score">1:1</div>
-                    <div class="li-inplay__event-header-time">71-04</div>
+                    <div class="text-nowrap li-inplay__event-header-score">1:1</div>
+                    <div class="text-nowrap li-inplay__event-header-time">71-04</div>
                   </div>
                   <div class="li-inplay__event-header-icon"></div>
                 </div>
@@ -207,11 +207,11 @@
                   <p class="font--white">England National League</p>
                 </div>
                 <div class="li-inplay__event-header li-inplay__event-header--closed">
-                  <p class="li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
+                  <p class="text-ellipsis li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
                   <div class="s-icon s-icon--play li-inplay__event-header-s-icon"></div>
                   <div class="li-inplay__event-header-wrap">
-                    <div class="li-inplay__event-header-score">1:1</div>
-                    <div class="li-inplay__event-header-time">71-04</div>
+                    <div class="text-nowrap li-inplay__event-header-score">1:1</div>
+                    <div class="text-nowrap li-inplay__event-header-time">71-04</div>
                   </div>
                   <div class="li-inplay__event-header-icon"></div>
                 </div>
@@ -227,10 +227,10 @@
                   <p class="font--white">England National League</p>
                 </div>
                 <div class="li-inplay__event-header li-inplay__event-header--closed">
-                  <p class="li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
+                  <p class="text-ellipsis li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
                   <div class="li-inplay__event-header-wrap">
-                    <div class="li-inplay__event-header-score">1:1</div>
-                    <div class="li-inplay__event-header-time">71-04</div>
+                    <div class="text-nowrap li-inplay__event-header-score">1:1</div>
+                    <div class="text-nowrap li-inplay__event-header-time">71-04</div>
                   </div>
                   <div class="li-inplay__event-header-icon"></div>
                 </div>
@@ -248,11 +248,11 @@
                   <p class="font--white">England National League</p>
                 </div>
                 <div class="li-inplay__event-header">
-                  <p class="li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
+                  <p class="text-ellipsis li-inplay__event-header-text">Antigua & Barbuda Premier Division</p>
                   <div class="s-icon s-icon--play li-inplay__event-header-s-icon"></div>
                   <div class="li-inplay__event-header-wrap">
-                    <div class="li-inplay__event-header-score">1:1</div>
-                    <div class="li-inplay__event-header-time">71-04</div>
+                    <div class="text-nowrap li-inplay__event-header-score">1:1</div>
+                    <div class="text-nowrap li-inplay__event-header-time">71-04</div>
                   </div>
                   <div class="li-inplay__event-header-icon"></div>
                 </div>
@@ -385,7 +385,7 @@
                   </div>
                 </div>
             </div>
-            <div class="content__right">
+            <div class="content__right" id="content-right-column">
                 <div class="tc-top-coupons">
                   <div class="tc-top-coupons__header">
                     <p class="font--white">Top Coupons</p>
@@ -519,7 +519,7 @@
                 </div>
                 <div class="ip-market__league">
                   <div class="ip-market__left">
-                    <p class="font--white">England National League</p>
+                    <p class="text-ellipsis font--white">England National League</p>
                   </div>
                   <div class="ip-market__head"><a class="ip-market__head-link ip-market__head-link--active">Slider</a><a class="ip-market__head-link">All</a></div>
                   <div class="ip-market__favourite"></div>
@@ -553,7 +553,7 @@
                 </div>
                 <div class="ip-market__league">
                   <div class="ip-market__left">
-                    <p class="font--white">England National League</p>
+                    <p class="text-ellipsis font--white">England National League</p>
                   </div>
                   <div class="ip-market__head"><a class="ip-market__head-link ip-market__head-link--active">Slider</a><a class="ip-market__head-link">All</a></div>
                   <div class="ip-market__favourite"></div>
@@ -581,7 +581,7 @@
                 </div>
                 <div class="ip-market__league">
                   <div class="ip-market__left">
-                    <p class="font--white">England National League</p>
+                    <p class="text-ellipsis font--white">England National League</p>
                   </div>
                   <div class="ip-market__head"><a class="ip-market__head-link ip-market__head-link--active">Slider</a><a class="ip-market__head-link">All</a></div>
                   <div class="ip-market__favourite"></div>
@@ -615,7 +615,7 @@
                 </div>
                 <div class="ip-market__league">
                   <div class="ip-market__left">
-                    <p class="font--white">England National League</p>
+                    <p class="text-ellipsis font--white">England National League</p>
                   </div>
                   <div class="ip-market__head"><a class="ip-market__head-link ip-market__head-link--active">Slider</a><a class="ip-market__head-link">All</a></div>
                   <div class="ip-market__favourite"></div>
@@ -1060,6 +1060,23 @@
                     <div class="bs-BtnAccept">Updating Odds<span class="bs-BtnText_NoMessageSpinner"></span></div></a>
                 </li>
               </ul>
+              <div class="bl-BetslipDarkWash_Absolute bl-BetslipDarkWash"></div>
+              <div class="bw-BetslipLogin">
+                <div class="bw-BetslipLogin_Close">&times;</div>
+                <div class="bw-BetslipLogin_Blurb">
+                  <div class="bw-BetslipLogin_Message">Please log in to place a bet</div>
+                </div>
+                <div class="bw-BetslipLogin_Input">
+                  <input class="bw-BetslipLogin_InputText bw-BetslipLogin_Username" type="text">
+                  <input class="bw-BetslipLogin_InputText bw-BetslipLogin_Password" type="text">
+                  <input class="bw-BetslipLogin_InputText bw-BetslipLogin_InputTextActive bw-BetslipLogin_Password Hidden" type="password">
+                  <button class="bw-BetslipLogin_LoginBtn">Log In</button>
+                </div>
+                <div class="bw-BetslipLogin_Help">
+                  <div class="bw-BetslipLogin_NewCustomer">New Customer?</div>
+                  <div class="bw-BetslipLogin_JoinNow">Join</div>
+                </div>
+              </div>
             </div>
             <div class="ha-coupon">
                 <div class="ha-coupon__table">

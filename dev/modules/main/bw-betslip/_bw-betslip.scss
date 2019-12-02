@@ -11,8 +11,82 @@ $betslip:(
 .bet-slip-type{
 	display: none;
 }
+.bl-BetslipDarkWash{
+	z-index: 3;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #000;
+	opacity: 0.65;
+	&_Absolute{
+		position: absolute;
+	}
+}
 
 .bw{
+	&-betslip{
+		position: relative;
+	}
+
+	
+	&-BetslipLogin{
+		@include absolute-center;
+		width: 270px;
+		z-index: 4;
+		background-color: lighten($third, 20%);
+		&_Close{
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			font-size: 18px;
+			cursor: pointer;
+			&:hover{
+				color: $primary;
+			}
+		}
+		&_Message{
+			text-align: center;
+			margin-top: 30px;	
+			margin-bottom: 20px;
+		}
+		&_Input{
+			@include flex(center,center,column);
+		}
+		&_InputText{
+			@include input;
+			max-width: 230px;
+			margin-bottom: 20px;
+			border: 1px solid rgba(0,0,0,0.1);
+			&.Hidden{
+				display: none;
+			}
+		}
+		&_LoginBtn{
+			@include flex(center,center);
+			@include font;
+			@include input;
+			border: 0;
+			cursor: pointer;
+			color: #fff;
+			max-width: 230px;
+			margin: 0 auto 20px auto;
+			background-color: $primary;
+		}
+		&_Help{
+			@include flex(center,center);
+			border-top: 1px solid rgba(0,0,0,0.1);
+			padding: 15px 10px;
+		}
+		&_NewCustomer{
+			margin-right: 5px;
+		}
+		&_JoinNow{
+			color: $primary;
+			cursor: pointer;
+		}
+	}
+
 	&-BetslipHeader{
 		height: $base-height;
 		background-color: $primary;
@@ -593,6 +667,10 @@ $betslip:(
 		}
 		&_ScoreWrapper{
 			color: $fifth;
+		}
+		&_Score-lastscore{
+			white-space: nowrap;
+			margin: 0 5px;
 		}
 	}
 }

@@ -1,7 +1,4 @@
 .li-inplay{
-	border: 1px solid red;
-
-
 	&__header{
 		@include flex(space-between, center);
 		padding: 5px 10px;

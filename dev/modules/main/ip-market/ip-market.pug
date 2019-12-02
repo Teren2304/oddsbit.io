@@ -26,7 +26,7 @@ mixin ip-market-league(val)
 	.ip-market__league&attributes(attributes)
 		.ip-market__left
 			img(src="../img/icon-country/gb.png", alt="").ip-market__flag
-			p.font--white England National League
+			p.text-ellipsis.font--white England National League
 		.ip-market__center
 			if (val)
 				- var a = 0;
@@ -39,7 +39,7 @@ mixin ip-market-league(val)
 mixin ip-market-league-2
 	.ip-market__league&attributes(attributes)
 		.ip-market__left
-			p.font--white England National League
+			p.text-ellipsis.font--white England National League
 		.ip-market__head
 			a.ip-market__head-link.ip-market__head-link--active Slider
 			a.ip-market__head-link All
@@ -49,13 +49,13 @@ mixin ip-market-league-2
 mixin ip-market-league-3
 	.ip-market__league&attributes(attributes)
 		.ip-market__left
-			p.font--white England National League
+			p.text-ellipsis.font--white England National League
 		.ip-market__drop
 
 mixin ip-market-league-4
 	.ip-market__league&attributes(attributes)
 		.ip-market__left
-			p.font--white League Table
+			p.text-ellipsis.font--white League Table
 		.ip-market__update
 			p.font--white Updated base on live scores
 
@@ -172,7 +172,7 @@ mixin ip-market-body-big(val, top, number, only, tennis, disabled, radio)
 									while n < val
 										.btn.ip-market__btn.ip-market__btn--small.ip-market__btn--left.ip-market__btn--b-none
 											input(type="checkbox", data=n++).checkbox
-											a.ip-market__coupon-link England Premiere League
+											a.text-ellipsis.ip-market__coupon-link England Premiere League
 			
 			if (only!=false)
 				.ip-market__right
