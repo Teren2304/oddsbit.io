@@ -17,7 +17,7 @@
 		margin: 0 2px;
 	}
 	&__btn{
-		margin-right: 1px;
+		border-left: 1px solid rgba(255,255,255,0.6);
 		background-color: rgba(0,0,0,0);
 		color: rgba(255,255,255,0.6);
 		&:last-child{
@@ -28,6 +28,9 @@
 			.dropdown{
 				display: block;
 			}
+		}
+		*{
+			font-size: 16px;
 		}
 	}
 	&__link{

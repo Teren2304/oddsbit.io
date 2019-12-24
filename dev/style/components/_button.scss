@@ -4,6 +4,7 @@
 	@include input;
 	border: 0;
 	cursor: pointer;
+	font-size: 12px;
 
 	&--primary{
 		background-color: $primary;
@@ -39,20 +40,20 @@
 
 	&__name{
 		color: #000;
-		margin: 0 3px;
+		margin: 0 1px;
 	}
 	&__odds{
 		color: $primary;
 		font-weight: bold;
-		margin: 0 3px;
+		margin: 0 1px;
 	}
 	&__text{
 		color: #000;
-		margin: 0 3px;
+		margin: 0 1px;
 	}
 	&__text-e{
 		color: #000;
-		margin: 0 3px;
+		margin: 0 1px;
 		@include ellipsis;
 	}
 	&__img{

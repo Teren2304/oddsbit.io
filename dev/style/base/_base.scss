@@ -21,8 +21,6 @@
 .page{
 	@include flex(space-between, stretch, column);
 	width: 100%;
-	min-width: 1366px;
-	overflow-x: auto;
 	&--full{
 		height: 100vh;
 		overflow-y: hidden;
@@ -31,6 +29,14 @@
 		}
 		.box{
 			height: calc(100vh - 148px);
+		}
+	}
+}
+.main{
+	.content{
+		&--center{
+			border-right: 1px solid $third;
+			border-left: 1px solid $third;
 		}
 	}
 }

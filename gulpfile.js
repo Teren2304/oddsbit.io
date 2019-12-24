@@ -94,7 +94,8 @@ gulp.task('server', function () {
     browserSync.init({
         server: { baseDir: paths.dirs.build },
         reloadOnRestart: true,
-        tunnel: 'remote'
+        tunnel: false,
+        host: "localhost"
     });
     gulp.watch(paths.html.watch, gulp.parallel('html'));
     gulp.watch(paths.css.watch, gulp.parallel('css'));

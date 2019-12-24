@@ -12,7 +12,7 @@ $betslip:(
 	display: none;
 }
 .bl-BetslipDarkWash{
-	z-index: 3;
+	z-index: 1;
 	left: 0;
 	top: 0;
 	bottom: 0;
@@ -23,13 +23,16 @@ $betslip:(
 		position: absolute;
 	}
 }
+.mbr-MyBetsRhs{
+	position: relative;
+	z-index: 2;
+}
 
 .bw{
 	&-betslip{
 		position: relative;
 	}
 
-	
 	&-BetslipLogin{
 		@include absolute-center;
 		width: 270px;
@@ -91,7 +94,9 @@ $betslip:(
 		height: $base-height;
 		background-color: $primary;
 		border-bottom: 1px solid $fourth;
-		text-align: center;	
+		text-align: center;
+		position: relative;
+		z-index: 2;
 		@include flex(center, stretch);
 		&_Item{
 			font-size: 16px;

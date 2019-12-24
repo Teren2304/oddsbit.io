@@ -21,7 +21,7 @@
 			background-color: $third;
 			.wn-classification{
 				&__icon{
-					color: #fff;
+					color: $second;
 				}
 				&__text{
 					color: #fff;
@@ -33,6 +33,7 @@
 				.wn-classification__icon{
 					&:after{
 						content: '\f005';
+						font-weight: 900;
 					}
 					&:hover{
 						&:after{
@@ -47,6 +48,13 @@
 				&:after{
 					content: '\f107';
 					font-size: 18px;
+				}
+			}
+			&:hover{
+				.wn-classification__icon{
+					&:after{
+						color: #fff;
+					}
 				}
 			}
 		}
@@ -75,6 +83,7 @@
 				background-color: $fourth;
 				.wn-classification__icon:after{
 					content: '\f005';
+					font-weight: 900;
 				}
 			}
 			.wn-classification{
@@ -86,7 +95,7 @@
 				}
 				&__icon{
 					&:after{
-						color: yellow;
+						color: $second;
 					}
 					
 				}
@@ -100,9 +109,6 @@
 				padding-left: 25px;
 			}
 		}
-	}
-	&__text{
-		//text-transform: uppercase;
 	}
 	&__icon{
 		min-width: 20px;

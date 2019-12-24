@@ -1,6 +1,7 @@
 .hm-search{
 	@include flex(center, center);
-	flex: 1 0 auto;
+	max-width: 100%;
+	width: 100%;
 	position: relative;
 	&:before {
 		@include absolute-center-left(5px);

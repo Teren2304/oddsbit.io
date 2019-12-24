@@ -232,7 +232,8 @@
 				padding-top: 5px;
 			}
 			&__icon{
-				color: #000;
+				color: $third;
+				font-weight: 900;
 			}
 		}
 	}
@@ -288,18 +289,21 @@
 		margin-right: 5px;
 	}
 	&__time{
-		width: 75px;
+		width: 55px;
 		text-align: left;
+		font-size: 12px;
 	}
 	&__info{
 		width: calc(100% - 200px);
+		flex-grow: 1;
 		margin-left: 0;
 		margin-right: auto;
 		.team{
 			&-name{
 				flex: 1 1 100%;
-				padding-left: 12px;
+				padding-left: 10px;
 				position: relative;
+				font-size: 12px;
 				&:before{
 					content: '';
 					position: absolute;
@@ -328,15 +332,16 @@
 	&__score{
 		text-align: right;
 		padding-right: 10px;
+		font-size: 12px;
 		.tennis-ss{
 			&__column{
-				padding: 0 3px;
+				padding: 0 2px;
 			}
 		}
 	}
 	&__option{
 		@include flex(center, flex-start, column);
-		width: 45px;
+		width: 35px;
 		min-height: 50px;
 		*{
 			margin: 2px;
@@ -363,6 +368,7 @@
 	}
 	&__more{
 		@include flex(center, center);
+		font-size: 12px;
 		&:hover,
 		&--active{
 			*{
